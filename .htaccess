@@ -1,0 +1,38 @@
+# Configurações para o Organizador de CSV na Hostinger
+
+# Rewrite Engine para Single Page Application
+RewriteEngine On
+RewriteRule ^$ index.html [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.html [L]
+
+# Permitir acesso aos recursos estáticos
+<Files ~ "\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Order allow,deny
+    Allow from all
+</Files>
+
+# Definir permissões CORS para permitir download de arquivos
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Comprimir recursos para melhor performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Configurar MIME types
+AddType application/javascript .js
+AddType text/css .css
+
+# Configurações para PHP (aumento de limites para arquivos grandes)
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 64M
+    php_value post_max_size 64M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>

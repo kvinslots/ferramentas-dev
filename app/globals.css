@@ -1,0 +1,306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1db954; /* Verde mais escuro, estilo Spotify */
+  --background: #0d1117;
+  --card: #161b22;
+  --foreground: #c9d1d9;
+  --border: #30363d;
+  --danger: #f85149;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+  @apply py-6 mb-6 border-b-2 border-primary shadow-md relative z-10;
+  background-color: rgba(13, 17, 23, 0.9);
+}
+
+/* Matrix Background */
+.matrix-background {
+  @apply fixed top-0 left-0 w-full h-full -z-10;
+}
+
+.matrix-background canvas {
+  @apply block opacity-[0.05];
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-md font-semibold transition-all duration-200 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-primary text-black hover:bg-opacity-80;
+}
+
+.btn-secondary {
+  @apply bg-[#21262d] text-white border border-border hover:bg-[#2d333b];
+}
+
+.btn-danger {
+  @apply bg-[#da3633] text-white hover:bg-[#f85149];
+}
+
+.btn-sm {
+  @apply px-3 py-1 text-sm;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-lg;
+}
+
+/* Tabs */
+.tabs {
+  @apply flex gap-1 flex-wrap;
+}
+
+.tab-btn {
+  @apply px-5 py-3 rounded-md font-semibold transition-all duration-200 ease-in-out bg-card border border-border;
+}
+
+.tab-btn:hover {
+  @apply bg-[#21262d];
+}
+
+.tab-btn.active {
+  @apply bg-primary bg-opacity-20 border-primary text-white;
+}
+
+/* Cards */
+.card {
+  @apply bg-card rounded-lg shadow-md overflow-hidden border border-border;
+}
+
+/* Upload Area */
+.upload-area {
+  @apply border-2 border-dashed border-primary rounded-md p-12 text-center cursor-pointer transition-all duration-300 ease-in-out;
+}
+
+.upload-area:hover {
+  @apply border-white bg-primary bg-opacity-5;
+}
+
+.upload-area.dragover {
+  @apply bg-primary bg-opacity-10 border-white;
+}
+
+/* Table */
+.table-container {
+  @apply overflow-x-auto max-w-full rounded-md border border-border;
+}
+
+table {
+  @apply w-full border-collapse text-sm;
+}
+
+thead th {
+  @apply bg-[#1c2128] text-white font-semibold text-left p-3 cursor-pointer select-none relative border-b border-border;
+}
+
+thead th:hover {
+  @apply bg-[#21262d];
+}
+
+tbody tr {
+  @apply border-b border-border transition-colors duration-200 ease-in-out relative;
+}
+
+tbody tr:last-child {
+  @apply border-b-0;
+}
+
+tbody tr:hover {
+  @apply bg-[#21262d];
+}
+
+tbody td {
+  @apply p-3 whitespace-nowrap;
+}
+
+/* Notification */
+.notification {
+  @apply fixed top-4 right-4 bg-[#21262d] border-l-4 border-primary p-4 rounded shadow-lg z-50 flex items-center transition-all duration-300 ease-in-out max-w-sm;
+}
+
+.notification.hidden {
+  @apply translate-x-[400px] opacity-0;
+}
+
+/* Column Toggle */
+.column-toggle {
+  @apply flex items-center bg-[#21262d] p-2 rounded cursor-pointer select-none transition-all duration-200 ease-in-out;
+}
+
+.column-toggle.active {
+  @apply bg-primary bg-opacity-20 border border-primary;
+}
+
+.column-toggle:hover {
+  @apply bg-[#2d333b];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#444c56];
+}
+
+/* Input Fields */
+.input-group {
+  @apply relative flex items-center;
+}
+
+.input-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.input-field {
+  @apply w-full py-2 px-3 bg-card border border-border rounded-md focus:border-primary focus:outline-none transition-colors;
+}
+
+.input-group .input-field {
+  @apply pl-10;
+}
+
+.input-clear-btn {
+  @apply absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xl font-bold;
+}
+
+/* File List */
+.file-list {
+  @apply space-y-2;
+}
+
+.file-item {
+  @apply p-3 bg-card border border-border rounded-md transition-colors hover:bg-[#21262d];
+}
+
+.file-icon {
+  @apply mr-3 text-primary;
+}
+
+.file-info {
+  @apply flex flex-col;
+}
+
+.file-name {
+  @apply font-medium;
+}
+
+.file-size {
+  @apply text-sm text-gray-400;
+}
+
+/* Progress Bar */
+.progress-label {
+  @apply flex justify-between text-sm mb-1;
+}
+
+.progress-bar {
+  @apply w-full h-2 bg-[#21262d] rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-primary transition-all duration-300 ease-out;
+}
+
+/* Form Controls */
+.form-checkbox {
+  @apply text-primary border-border bg-transparent focus:ring-primary focus:ring-opacity-25;
+}
+
+/* Highlight row */
+.highlight-row {
+  @apply bg-primary bg-opacity-30 transition-colors;
+  animation: pulse-highlight 2s ease-in-out;
+}
+
+@keyframes pulse-highlight {
+  0%, 100% {
+    @apply bg-opacity-30;
+  }
+  50% {
+    @apply bg-opacity-50;
+  }
+}
+
+/* Animação para pulso lento */
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Animação de fade in */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação de slide para transição de abas */
+.card {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de brilho para elementos em hover */
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Padrão quadriculado para mostrar transparência */
+.bg-checker-pattern {
+  background-image: linear-gradient(45deg, #808080 25%, transparent 25%),
+    linear-gradient(-45deg, #808080 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #808080 75%),
+    linear-gradient(-45deg, transparent 75%, #808080 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  background-color: #21262d;
+}

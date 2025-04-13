@@ -1,0 +1,61 @@
+# Dependências
+node_modules
+/.pnp
+.pnp.js
+
+# Arquivos de build
+/.next/
+/out/
+/build
+/dist
+
+# Arquivos de cache
+.vercel
+.cache
+.npm
+.eslintcache
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de cobertura de teste
+coverage
+
+# Arquivos temporários
+/tmp
+*.tmp
+*.swp
+*.swo
+
+# Grandes arquivos de dados
+*.csv
+*.xlsx
+*.xls
+data/*.json
+
+# Arquivos processados
+/processed
+/backgrounds
+/converted
+/public/processed
+/public/backgrounds
+/public/converted
+/public/upload
+
+# VSCode
+.vscode

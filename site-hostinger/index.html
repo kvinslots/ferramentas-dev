@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FERRAMENTAS DEV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/matrix.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Matrix -->
+    <div id="matrix-background"></div>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1 class="site-title"><span class="text-primary">&gt;</span> FERRAMENTAS DEV</h1>
+        <p class="site-subtitle">[ Sistema profissional de ferramentas para desenvolvedores ]</p>
+    </div>
+
+    <!-- Container principal -->
+    <div class="container">
+        <!-- Página inicial com cards de ferramentas -->
+        <div id="home-page" class="page active">
+            <div class="card">
+                <div class="tools-grid">
+                    <!-- Organizador CSV -->
+                    <div class="tool-card" data-tool="csv">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <h3 class="tool-name">Organizador CSV</h3>
+                        </div>
+                        <p class="tool-description">
+                            Organize, filtre e edite grandes volumes de dados em CSV com facilidade. Encontre registros específicos com busca avançada e exporte nos formatos desejados.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Removedor de Metadados -->
+                    <div class="tool-card" data-tool="metadata">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="tool-name">Removedor de Metadados</h3>
+                        </div>
+                        <p class="tool-description">
+                            Remova informações sensíveis de imagens e vídeos antes de compartilhá-los. Proteja sua privacidade mantendo a qualidade original dos arquivos.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Conversor Typebot -->
+                    <div class="tool-card" data-tool="typebot">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="tool-name">Conversor Typebot</h3>
+                        </div>
+                        <p class="tool-description">
+                            Transforme dados JSON complexos em formatos compatíveis com Typebot. Importe e crie fluxos automatizados de conversação em minutos.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Consulta CPF -->
+                    <div class="tool-card" data-tool="cpf">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h3 class="tool-name">Consulta CPF</h3>
+                        </div>
+                        <p class="tool-description">
+                            Verifique informações básicas de CPF de forma rápida e segura. Obtenha dados como nome completo, sexo, data de nascimento e nome da mãe.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Encurtador de Links -->
+                    <div class="tool-card" data-tool="link">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h3 class="tool-name">Encurtador de Links</h3>
+                        </div>
+                        <p class="tool-description">
+                            Crie links curtos para compartilhar facilmente. Acompanhe estatísticas de cliques e personalize seus URLs para melhor engajamento.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Gerador de QR Code -->
+                    <div class="tool-card" data-tool="qrcode">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-qrcode"></i>
+                            </div>
+                            <h3 class="tool-name">Gerador de QR Code</h3>
+                        </div>
+                        <p class="tool-description">
+                            Crie QR Codes personalizados para compartilhar links, informações de contato ou qualquer conteúdo digital. Personalize cores e adicione seu logotipo.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Removedor de Fundo -->
+                    <div class="tool-card" data-tool="bgremove">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-crop-alt"></i>
+                            </div>
+                            <h3 class="tool-name">Removedor de Fundo</h3>
+                        </div>
+                        <p class="tool-description">
+                            Remova o fundo de qualquer imagem automaticamente e obtenha uma versão transparente em formato PNG. Ideal para produtos, logos, perfis e design.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Conversor de Imagens -->
+                    <div class="tool-card" data-tool="imgconvert">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3 class="tool-name">Conversor de Imagens</h3>
+                        </div>
+                        <p class="tool-description">
+                            Converta imagens entre diversos formatos (JPG, PNG, WebP) com controle de qualidade. Ideal para otimizar imagens para web ou redes sociais.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+
+                    <!-- Editor HTML -->
+                    <div class="tool-card" data-tool="htmleditor">
+                        <div class="tool-header">
+                            <div class="tool-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="tool-name">Editor HTML</h3>
+                        </div>
+                        <p class="tool-description">
+                            Crie e edite código HTML com visualização em tempo real. Perfeito para prototipar páginas web, testar layouts ou aprender HTML e CSS.
+                        </p>
+                        <button class="button tool-button">Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Páginas das ferramentas (serão mostradas via JavaScript) -->
+        <div id="csv-page" class="page">
+            <div class="tool-header-bar">
+                <button class="back-button"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <h2 class="tool-title"><span class="text-primary">&gt;</span> Organizador CSV</h2>
+            </div>
+            <div class="card">
+                <div class="tool-description-full">
+                    <p>Ferramenta profissional para importar, organizar e manipular arquivos CSV com facilidade. 
+                    Pesquise por nome, CPF ou telefone, filtre dados, selecione múltiplas linhas para exclusão 
+                    e exporte nos formatos desejados. Ideal para análise de dados e gerenciamento de cadastros.</p>
+                </div>
+                <div class="file-upload-area">
+                    <label for="csv-file" class="file-upload-label">
+                        <i class="fas fa-file-upload"></i>
+                        <span>Selecione ou arraste um arquivo CSV</span>
+                    </label>
+                    <input type="file" id="csv-file" accept=".csv" class="file-upload-input">
+                </div>
+                <div id="csv-data-container" style="display: none;">
+                    <div class="toolbar">
+                        <div class="search-container">
+                            <input type="text" id="csv-search" placeholder="Pesquisar...">
+                            <button id="csv-search-btn" class="button"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="actions-container">
+                            <button id="csv-export-csv" class="button">CSV</button>
+                            <button id="csv-export-excel" class="button">Excel</button>
+                            <button id="csv-export-txt" class="button">TXT</button>
+                            <button id="csv-delete-selected" class="button danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table id="csv-table" class="data-table"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página Removedor de Metadados -->
+        <div id="metadata-page" class="page">
+            <div class="tool-header-bar">
+                <button class="back-button"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <h2 class="tool-title"><span class="text-primary">&gt;</span> Removedor de Metadados</h2>
+            </div>
+            <div class="card">
+                <div class="tool-description-full">
+                    <p>Remova informações sensíveis de imagens e vídeos antes de compartilhá-los. Proteja sua privacidade mantendo a qualidade original dos arquivos.</p>
+                </div>
+                <div class="file-upload-area">
+                    <label for="metadata-file" class="file-upload-label">
+                        <i class="fas fa-file-upload"></i>
+                        <span>Selecione ou arraste uma imagem/vídeo</span>
+                    </label>
+                    <input type="file" id="metadata-file" accept="image/*,video/*" class="file-upload-input">
+                </div>
+                <div id="metadata-preview" style="display: none;">
+                    <div class="preview-container">
+                        <img id="metadata-image-preview" class="preview-image">
+                        <video id="metadata-video-preview" class="preview-video" controls></video>
+                    </div>
+                    <div class="metadata-info">
+                        <h3>Metadados detectados:</h3>
+                        <div id="metadata-list" class="metadata-list"></div>
+                    </div>
+                    <div class="buttons-container">
+                        <button id="metadata-remove-btn" class="button">Remover Metadados</button>
+                        <button id="metadata-download-btn" class="button" disabled>Baixar Arquivo Limpo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outras páginas seriam adicionadas aqui... -->
+
+    </div>
+
+    <!-- Sistema de notificação -->
+    <div id="notification" class="notification">
+        <span id="notification-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/matrix.js"></script>
+    <!-- Bibliotecas externas diretas por CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FERRAMENTAS DEV</title>
+  <style>
+    :root {
+      --primary: #1db954;
+      --background: #0d1117;
+      --card: #161b22;
+      --foreground: #c9d1d9;
+      --border: #30363d;
+      --danger: #f85149;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+    
+    .header {
+      padding: 1.5rem 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--primary);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 10;
+      background-color: rgba(13, 17, 23, 0.9);
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    h1:hover {
+      transform: scale(1.05);
+    }
+    
+    h1 span {
+      color: var(--primary);
+    }
+    
+    .subtitle {
+      text-align: center;
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      color: var(--primary);
+      letter-spacing: 0.05em;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      padding-bottom: 4rem;
+    }
+    
+    .card {
+      background-color: var(--card);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+    }
+    
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    @media (min-width: 640px) {
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .tool-card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-color: var(--primary);
+    }
+    
+    .tool-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .tool-icon {
+      width: 3rem;
+      height: 3rem;
+      color: var(--primary);
+      margin-right: 1rem;
+    }
+    
+    .tool-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    
+    .tool-description {
+      color: #8b949e;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: black;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      opacity: 0.8;
+    }
+    
+    .maintenance-message {
+      text-align: center;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 3rem auto;
+      background-color: var(--card);
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+    }
+    
+    .maintenance-message h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .maintenance-message p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    
+    .coming-soon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--primary);
+      color: black;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1><span>&gt;</span> FERRAMENTAS DEV</h1>
+    <p class="subtitle">[ Sistema profissional de ferramentas para desenvolvedores ]</p>
+  </div>
+  
+  <div class="container">
+    <div class="maintenance-message">
+      <h2>Site em Manutenção</h2>
+      <p>Estamos fazendo algumas melhorias para oferecer uma experiência ainda melhor para você!</p>
+      <p>As ferramentas estarão disponíveis em breve. Acompanhe nosso trabalho para ficar por dentro das novidades.</p>
+      <p><strong>Contato:</strong> <a href="mailto:contato@ferramentasdev.site" style="color: var(--primary);">contato@ferramentasdev.site</a></p>
+    </div>
+    
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h3 class="tool-name">Organizador CSV</h3>
+        </div>
+        <p class="tool-description">
+          Organize, filtre e edite grandes volumes de dados em CSV com facilidade. Encontre registros específicos com busca avançada e exporte nos formatos desejados.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+          <h3 class="tool-name">Removedor de Metadados</h3>
+        </div>
+        <p class="tool-description">
+          Remova informações sensíveis de imagens e vídeos antes de compartilhá-los. Proteja sua privacidade mantendo a qualidade original dos arquivos.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <h3 class="tool-name">Conversor Typebot</h3>
+        </div>
+        <p class="tool-description">
+          Transforme dados JSON complexos em formatos compatíveis com Typebot. Importe e crie fluxos automatizados de conversação em minutos.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+          </svg>
+          <h3 class="tool-name">Consulta CPF</h3>
+        </div>
+        <p class="tool-description">
+          Verifique informações básicas de CPF de forma rápida e segura. Obtenha dados como nome completo, sexo, data de nascimento e nome da mãe.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+          </svg>
+          <h3 class="tool-name">Encurtador de Links</h3>
+        </div>
+        <p class="tool-description">
+          Crie links curtos para compartilhar facilmente. Acompanhe estatísticas de cliques e personalize seus URLs para melhor engajamento.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+          </svg>
+          <h3 class="tool-name">Gerador de QR Code</h3>
+        </div>
+        <p class="tool-description">
+          Crie QR Codes personalizados para compartilhar links, informações de contato ou qualquer conteúdo digital. Personalize cores e adicione seu logotipo.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+          <h3 class="tool-name">Removedor de Fundo</h3>
+        </div>
+        <p class="tool-description">
+          Remova o fundo de qualquer imagem automaticamente e obtenha uma versão transparente em formato PNG. Ideal para produtos, logos, perfis e design.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>
+          <h3 class="tool-name">Conversor de Imagens</h3>
+        </div>
+        <p class="tool-description">
+          Converta imagens entre diversos formatos (JPG, PNG, WebP) com controle de qualidade. Ideal para otimizar imagens para web ou redes sociais.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+      
+      <div class="tool-card">
+        <div class="tool-header">
+          <svg class="tool-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+          <h3 class="tool-name">Editor HTML</h3>
+        </div>
+        <p class="tool-description">
+          Crie e edite código HTML com visualização em tempo real. Perfeito para prototipar páginas web, testar layouts ou aprender HTML e CSS.
+        </p>
+        <span class="coming-soon">Em breve</span>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Simples animação de fade-in para os cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.tool-card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.style.opacity = '1';
+        }, index * 100);
+      });
+    });
+  </script>
+</body>
+</html>
