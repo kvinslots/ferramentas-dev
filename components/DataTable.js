@@ -12,7 +12,8 @@ export default function DataTable({
   fileName, 
   visibleColumns, 
   setVisibleColumns,
-  showNotification 
+  showNotification,
+  setActiveTab // Adicionando prop para navegação de volta
 }) {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: null })
   const [selectedColumn, setSelectedColumn] = useState(null)
@@ -372,6 +373,18 @@ export default function DataTable({
 
   return (
     <div>
+      {/* Botão Voltar */}
+      <div className="mb-4">
+        <button
+          onClick={() => setActiveTab('home')}
+          className="btn btn-outline flex items-center gap-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Voltar para Home
+        </button>
+      </div>
       {/* Barra de pesquisa */}
       <div className="pb-4 mb-4 border-b border-border">
         <div className="flex flex-col sm:flex-row gap-4 mb-4">

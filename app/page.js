@@ -82,6 +82,7 @@ export default function Home() {
                   visibleColumns={visibleColumns}
                   setVisibleColumns={setVisibleColumns}
                   showNotification={showNotification}
+                  setActiveTab={setActiveTab}
                 />
               </div>
             )}
@@ -93,6 +94,7 @@ export default function Home() {
           <div className="card p-6">
             <MetadataRemover 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -102,6 +104,7 @@ export default function Home() {
           <div className="card p-6">
             <TypebotConverter 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -111,6 +114,7 @@ export default function Home() {
           <div className="card p-6">
             <CpfConsulta 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -120,6 +124,7 @@ export default function Home() {
           <div className="card p-6">
             <LinkShortener 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -139,6 +144,7 @@ export default function Home() {
           <div className="card p-6">
             <QrCodeGenerator 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -148,6 +154,7 @@ export default function Home() {
           <div className="card p-6">
             <BackgroundRemover 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -157,6 +164,7 @@ export default function Home() {
           <div className="card p-6">
             <ImageConverter 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}
@@ -166,6 +174,7 @@ export default function Home() {
           <div className="card p-6">
             <HtmlEditor 
               showNotification={showNotification}
+              setActiveTab={setActiveTab}
             />
           </div>
         )}

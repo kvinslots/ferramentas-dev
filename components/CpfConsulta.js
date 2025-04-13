@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export default function CpfConsulta({ showNotification }) {
+export default function CpfConsulta({ showNotification, setActiveTab }) {
   const [cpf, setCpf] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [resultado, setResultado] = useState(null)
@@ -118,7 +118,7 @@ export default function CpfConsulta({ showNotification }) {
         </h2>
         
         <button 
-          onClick={() => window.history.back()}
+          onClick={() => setActiveTab('home')}
           className="btn btn-sm btn-secondary flex items-center gap-2"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
