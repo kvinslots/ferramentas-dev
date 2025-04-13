@@ -140,7 +140,7 @@ export default function QrCodeGenerator({ showNotification }) {
               <label className="block text-sm font-medium mb-1">URL ou Texto</label>
               <input
                 type="text"
-                className="w-full bg-input border border-border text-white px-3 py-2 rounded-md focus:outline-none focus:border-primary"
+                className="w-full bg-input border border-border text-black px-3 py-2 rounded-md focus:outline-none focus:border-primary"
                 placeholder="https://exemplo.com.br"
                 value={url}
                 onChange={handleUrlChange}
@@ -161,7 +161,7 @@ export default function QrCodeGenerator({ showNotification }) {
                   />
                   <input
                     type="text"
-                    className="flex-grow bg-input border border-border text-white px-3 py-1 rounded-md focus:outline-none focus:border-primary"
+                    className="flex-grow bg-input border border-border text-black px-3 py-1 rounded-md focus:outline-none focus:border-primary"
                     value={foregroundColor}
                     onChange={(e) => setForegroundColor(e.target.value)}
                   />
@@ -179,7 +179,7 @@ export default function QrCodeGenerator({ showNotification }) {
                   />
                   <input
                     type="text"
-                    className="flex-grow bg-input border border-border text-white px-3 py-1 rounded-md focus:outline-none focus:border-primary"
+                    className="flex-grow bg-input border border-border text-black px-3 py-1 rounded-md focus:outline-none focus:border-primary"
                     value={backgroundColor}
                     onChange={(e) => setBackgroundColor(e.target.value)}
                   />
